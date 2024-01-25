@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up and Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-card {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-action {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-signup {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .btn-login {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .btn-action:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <h2 class="text-center">Sign Up</h2>
+    <form id="signupForm" onsubmit="return signupUser()">
+        <div class="form-group">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" class="form-control" required>
+        </div>
+        <button onclick="alert('Thanks for sign up')" type="submit" class="btn btn-action btn-signup">Sign Up</button>
+    </form>
+
+    <hr>
+
+    <h2 class="text-center">Login</h2>
+    <form id="loginForm" onsubmit="return loginUser()">
+        <div class="form-group">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" class="form-control" required>
+        </div>
+        <button type="button" onclick="login()" class="btn btn-action btn-login" id="log">Login</button>
+    </form>
+</div>
+<script>
+    
+    function login(){
+        const user=document.getElementById("loginUsername").value;
+        const pass=document.getElementById("loginPassword").value;
+        window.location.href="tut.html";
+    
+        
+    }
+    
+</script>
+</body>
+
+</html>
