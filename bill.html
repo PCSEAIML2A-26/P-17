@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <link rel="stylesheet" href="bill_style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="bill">
+          <h1>Order Details:</h1>
+          <form action="">
+            <label>Name* :</label>
+              <input type="text" id="name" placeholder="Enter your Name">
+               <br>
+               <br>
+               <label>Address*:</label>
+               <input type="text" id="address" placeholder="Enter Your Address">
+              <br>
+              <br>
+              <label>Contact No.* +91:</label>
+              <input type="text" id="num" placeholder="Enter your Contact No.">
+               <br>
+               <br>
+               <label>Pincode: </label>
+               <input type="text" placeholder="Pincode">
+               <br>
+               
+               <p id="note">Note: Only Cash On Delivery</p>
+              <button type="button" id="btn" onclick="arham()">Order now</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function arham(){
+        const name=document.getElementById("name").value;
+        const address=document.getElementById("address").value;
+        const num=document.getElementById("num").value;
+        const m=address.length;
+        console.log(m);
+        if(name=="" || address=="" || num==""){
+            alert('Fill the details.');
+        }
+        else{
+        
+                window.location.href="order.html";
+            
+            
+        }
+        
+        
+    }
+</script>
+</html>
